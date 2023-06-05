@@ -1,6 +1,7 @@
 import Form from "@/components/Form";
 import Header from "@/components/Header";
-import PostItem from "@/components/Posts/PostItem";
+import CommentFeed from "@/components/posts/CommentFeed";
+import PostItem from "@/components/posts/PostItem";
 import usePost from "@/hooks/usePost";
 import { useRouter } from "next/router";
 import { ClipLoader } from "react-spinners";
@@ -26,6 +27,7 @@ const PostView = () => {
         isComment
         placeholder="Tweet your reply"
       />
+      <CommentFeed comments={post.comments} />
     </>
   );
 };

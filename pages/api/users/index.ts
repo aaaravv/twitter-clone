@@ -9,12 +9,12 @@ export default async function handler(
   if (req.method !== "GET") return res.status(405).end();
 
   try {
-    const users = prisma.user.findMany({
+    const users = await prisma.user.findMany({
       orderBy: {
         createdAt: "desc",
       },
     });
-
+    console.log("users", users);
     res.status(200).json(users);
   } catch (error) {
     console.error(error);

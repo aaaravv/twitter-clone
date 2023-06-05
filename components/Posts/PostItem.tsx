@@ -19,7 +19,7 @@ const PostItem: React.FC<PostItemProps> = ({ post, userId = "" }) => {
   const { currentUser } = useCurrentUser();
   const { hasLiked, toggleLike } = useLike({
     postId: post.id,
-    userId: currentUser?.id,
+    userId,
   });
 
   const goToUser = useCallback(
@@ -50,7 +50,7 @@ const PostItem: React.FC<PostItemProps> = ({ post, userId = "" }) => {
   );
 
   const createdAt = useMemo(() => {
-    if (!post.createdAt) return null;
+    if (!post?.createdAt) return null;
 
     return formatDistanceToNowStrict(new Date(post.createdAt));
   }, [post?.createdAt]);

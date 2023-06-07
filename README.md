@@ -1,6 +1,6 @@
 # Twitter Clone
 
-[![GitHub license](https://img.shields.io/github/license/aaaravv/twitter-clone)](https://github.com/aaaravv/twitter-clone/blob/main/LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 
 This repository contains a Twitter clone built using React, Tailwind, Next.js, Prisma, MongoDB, NextAuth, and TypeScript. The application aims to replicate some of the core functionalities of Twitter while utilizing modern web development technologies.
 
